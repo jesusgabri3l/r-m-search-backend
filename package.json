@@ -2,10 +2,11 @@
   "name": "typescript-node-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "app.typescript",
+  "main": "src/app.ts",
   "scripts": {
     "lint": "eslint src/*",
-    "start": "nodemon src/app.ts"
+    "dev": "nodemon src/app.ts",
+    "build": "tsc && node dist/app.js"
   },
   "keywords": [],
   "author": "",

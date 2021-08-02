@@ -1,5 +1,6 @@
-const demo = (): string => {
-    return 'Hello world!'
-}
+import {Response, Request} from 'express';
+const demo = (req: Request, res: Response): void => {
+    res.send('Hello world!');
+};
 
-export {demo}
+module.exports = {demo};

@@ -1,7 +1,6 @@
-import express from 'express'
-const router = express.Router()
-import {demo} from '../controllers/demoController';
+const router = require('express').Router();
+const {demo: demoHandler} = require('../controllers/demoController.ts');
 
-router.get('/', demo)
+router.get('/', demoHandler);
 
-export default router;
+module.exports = router;

@@ -1,6 +1,6 @@
-import dotenv from 'dotenv';
-import express from 'express';
-import cors from 'cors';
+const dotenv = require('dotenv');
+const express = require('express');
+const cors = require('cors');
 
 dotenv.config({
   path: '.env'
@@ -15,10 +15,12 @@ server.app.use(express.json());
 
 
 //ROUTES//
-import demoRouter from './routes/demoRouter';
+const demoRouter = require('./routes/demoRouter');
 server.app.use('/demo', demoRouter);
 
 
 ((port = process.env.PORT || 5000) => {
   server.app.listen(port, () => console.log(`🚀 Server running on port ${port}`));
 })();
+
+module.exports = {express};
